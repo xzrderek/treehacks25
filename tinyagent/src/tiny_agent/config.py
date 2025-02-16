@@ -75,7 +75,7 @@ def get_model_config(
             else DEFAULT_EMBEDDING_CONTEXT_LENGTH
         )
         if agent_type != AgentType.EMBEDDING:
-            tokenizer = AutoTokenizer.from_pretrained( # "google-bert/bert-base-uncased"
+            tokenizer = AutoTokenizer.from_pretrained(
                 config[f"local{agent_prefix}TokenizerNameOrPath"],
                 use_fast=True,
                 token=config["hfToken"],
@@ -174,7 +174,6 @@ def get_tiny_agent_config(config_path: str) -> TinyAgentConfig:
         AgentType.SUB_AGENT,
     )
     if use_in_context_example_retriever is True:
-        # raise ValueError("use_in_context_example_retriever value is {use_in_context_example_retriever}")
         embedding_model_config = get_model_config(
             config, config["toolRAGProvider"], AgentType.EMBEDDING
         )
