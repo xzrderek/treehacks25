@@ -11,6 +11,8 @@ struct ContentView: View {
     // PROPERTY
     @State private var tasks: [Task] = [Task]()
     @State private var text: String = ""
+    // Add server URL configuration
+    private let serverURL = Bundle.main.object(forInfoDictionaryKey: "ServerURL") as? String ?? "http://localhost:8000"
     
     // FUNCTION
     
@@ -106,7 +108,7 @@ struct ContentView: View {
             Button {
                 for task in tasks {
                     print("Task: \(task)")
-                    guard let url = URL(string: "http://192.168.6.46:8000/tasks/submit") else {
+                    guard let url = URL(string: "\(serverURL)/tasks/submit") else {
                         print("Invalid URL")
                         continue
                     }
