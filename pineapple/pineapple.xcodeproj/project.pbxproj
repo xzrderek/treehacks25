@@ -1,0 +1,851 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D1B621F82D5ED8C600C8ACDF /* pineapple WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = D1B621F72D5ED8C600C8ACDF /* pineapple WatchKit App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		D1B621FD2D5ED8C700C8ACDF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D1B621FC2D5ED8C700C8ACDF /* Assets.xcassets */; };
+		D1B622032D5ED8C700C8ACDF /* pineapple WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = D1B622022D5ED8C700C8ACDF /* pineapple WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		D1B622082D5ED8C700C8ACDF /* pineappleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B622072D5ED8C700C8ACDF /* pineappleApp.swift */; };
+		D1B6220A2D5ED8C700C8ACDF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B622092D5ED8C700C8ACDF /* ContentView.swift */; };
+		D1B6220C2D5ED8C700C8ACDF /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B6220B2D5ED8C700C8ACDF /* NotificationController.swift */; };
+		D1B6220E2D5ED8C700C8ACDF /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B6220D2D5ED8C700C8ACDF /* NotificationView.swift */; };
+		D1B622102D5ED8C700C8ACDF /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B6220F2D5ED8C700C8ACDF /* ComplicationController.swift */; };
+		D1B622122D5ED8C700C8ACDF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D1B622112D5ED8C700C8ACDF /* Assets.xcassets */; };
+		D1B622152D5ED8C700C8ACDF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D1B622142D5ED8C700C8ACDF /* Preview Assets.xcassets */; };
+		D1B622212D5ED8C700C8ACDF /* pineappleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B622202D5ED8C700C8ACDF /* pineappleTests.swift */; };
+		D1B6222B2D5ED8C700C8ACDF /* pineappleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B6222A2D5ED8C700C8ACDF /* pineappleUITests.swift */; };
+		D1B6222D2D5ED8C700C8ACDF /* pineappleUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B6222C2D5ED8C700C8ACDF /* pineappleUITestsLaunchTests.swift */; };
+		D1B622442D5EDC7900C8ACDF /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B622432D5EDC7900C8ACDF /* Task.swift */; };
+		D1B622482D5EE96400C8ACDF /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B622472D5EE96400C8ACDF /* DetailView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D1B621F92D5ED8C600C8ACDF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D1B621ED2D5ED8C500C8ACDF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D1B621F62D5ED8C600C8ACDF;
+			remoteInfo = "pineapple WatchKit App";
+		};
+		D1B622042D5ED8C700C8ACDF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D1B621ED2D5ED8C500C8ACDF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D1B622012D5ED8C700C8ACDF;
+			remoteInfo = "pineapple WatchKit Extension";
+		};
+		D1B6221D2D5ED8C700C8ACDF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D1B621ED2D5ED8C500C8ACDF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D1B622012D5ED8C700C8ACDF;
+			remoteInfo = "pineapple WatchKit Extension";
+		};
+		D1B622272D5ED8C700C8ACDF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D1B621ED2D5ED8C500C8ACDF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D1B621F62D5ED8C600C8ACDF;
+			remoteInfo = "pineapple WatchKit App";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		D1B622332D5ED8C700C8ACDF /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				D1B622032D5ED8C700C8ACDF /* pineapple WatchKit Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D1B622372D5ED8C700C8ACDF /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				D1B621F82D5ED8C600C8ACDF /* pineapple WatchKit App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		D1B621F32D5ED8C600C8ACDF /* pineapple.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = pineapple.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D1B621F72D5ED8C600C8ACDF /* pineapple WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "pineapple WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D1B621FC2D5ED8C700C8ACDF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D1B622022D5ED8C700C8ACDF /* pineapple WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "pineapple WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D1B622072D5ED8C700C8ACDF /* pineappleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pineappleApp.swift; sourceTree = "<group>"; };
+		D1B622092D5ED8C700C8ACDF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		D1B6220B2D5ED8C700C8ACDF /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		D1B6220D2D5ED8C700C8ACDF /* NotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationView.swift; sourceTree = "<group>"; };
+		D1B6220F2D5ED8C700C8ACDF /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
+		D1B622112D5ED8C700C8ACDF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D1B622142D5ED8C700C8ACDF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		D1B622162D5ED8C700C8ACDF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D1B622172D5ED8C700C8ACDF /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		D1B6221C2D5ED8C700C8ACDF /* pineappleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = pineappleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D1B622202D5ED8C700C8ACDF /* pineappleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pineappleTests.swift; sourceTree = "<group>"; };
+		D1B622262D5ED8C700C8ACDF /* pineappleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = pineappleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D1B6222A2D5ED8C700C8ACDF /* pineappleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pineappleUITests.swift; sourceTree = "<group>"; };
+		D1B6222C2D5ED8C700C8ACDF /* pineappleUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pineappleUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		D1B622432D5EDC7900C8ACDF /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
+		D1B622472D5EE96400C8ACDF /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D1B621FF2D5ED8C700C8ACDF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D1B622192D5ED8C700C8ACDF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D1B622232D5ED8C700C8ACDF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D1B621EC2D5ED8C500C8ACDF = {
+			isa = PBXGroup;
+			children = (
+				D1B621FB2D5ED8C600C8ACDF /* pineapple WatchKit App */,
+				D1B622062D5ED8C700C8ACDF /* pineapple WatchKit Extension */,
+				D1B6221F2D5ED8C700C8ACDF /* pineappleTests */,
+				D1B622292D5ED8C700C8ACDF /* pineappleUITests */,
+				D1B621F42D5ED8C600C8ACDF /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D1B621F42D5ED8C600C8ACDF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D1B621F32D5ED8C600C8ACDF /* pineapple.app */,
+				D1B621F72D5ED8C600C8ACDF /* pineapple WatchKit App.app */,
+				D1B622022D5ED8C700C8ACDF /* pineapple WatchKit Extension.appex */,
+				D1B6221C2D5ED8C700C8ACDF /* pineappleTests.xctest */,
+				D1B622262D5ED8C700C8ACDF /* pineappleUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D1B621FB2D5ED8C600C8ACDF /* pineapple WatchKit App */ = {
+			isa = PBXGroup;
+			children = (
+				D1B621FC2D5ED8C700C8ACDF /* Assets.xcassets */,
+			);
+			path = "pineapple WatchKit App";
+			sourceTree = "<group>";
+		};
+		D1B622062D5ED8C700C8ACDF /* pineapple WatchKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				D1B622072D5ED8C700C8ACDF /* pineappleApp.swift */,
+				D1B622412D5EDC5700C8ACDF /* View */,
+				D1B6220B2D5ED8C700C8ACDF /* NotificationController.swift */,
+				D1B6220D2D5ED8C700C8ACDF /* NotificationView.swift */,
+				D1B6220F2D5ED8C700C8ACDF /* ComplicationController.swift */,
+				D1B622112D5ED8C700C8ACDF /* Assets.xcassets */,
+				D1B622162D5ED8C700C8ACDF /* Info.plist */,
+				D1B622172D5ED8C700C8ACDF /* PushNotificationPayload.apns */,
+				D1B622132D5ED8C700C8ACDF /* Preview Content */,
+			);
+			path = "pineapple WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		D1B622132D5ED8C700C8ACDF /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				D1B622142D5ED8C700C8ACDF /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		D1B6221F2D5ED8C700C8ACDF /* pineappleTests */ = {
+			isa = PBXGroup;
+			children = (
+				D1B622202D5ED8C700C8ACDF /* pineappleTests.swift */,
+			);
+			path = pineappleTests;
+			sourceTree = "<group>";
+		};
+		D1B622292D5ED8C700C8ACDF /* pineappleUITests */ = {
+			isa = PBXGroup;
+			children = (
+				D1B6222A2D5ED8C700C8ACDF /* pineappleUITests.swift */,
+				D1B6222C2D5ED8C700C8ACDF /* pineappleUITestsLaunchTests.swift */,
+			);
+			path = pineappleUITests;
+			sourceTree = "<group>";
+		};
+		D1B622412D5EDC5700C8ACDF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D1B622422D5EDC6500C8ACDF /* Model */,
+				D1B622092D5ED8C700C8ACDF /* ContentView.swift */,
+				D1B622472D5EE96400C8ACDF /* DetailView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D1B622422D5EDC6500C8ACDF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D1B622432D5EDC7900C8ACDF /* Task.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D1B621F22D5ED8C500C8ACDF /* pineapple */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D1B622382D5ED8C700C8ACDF /* Build configuration list for PBXNativeTarget "pineapple" */;
+			buildPhases = (
+				D1B621F12D5ED8C500C8ACDF /* Resources */,
+				D1B622372D5ED8C700C8ACDF /* Embed Watch Content */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D1B621FA2D5ED8C600C8ACDF /* PBXTargetDependency */,
+			);
+			name = pineapple;
+			productName = pineapple;
+			productReference = D1B621F32D5ED8C600C8ACDF /* pineapple.app */;
+			productType = "com.apple.product-type.application.watchapp2-container";
+		};
+		D1B621F62D5ED8C600C8ACDF /* pineapple WatchKit App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D1B622342D5ED8C700C8ACDF /* Build configuration list for PBXNativeTarget "pineapple WatchKit App" */;
+			buildPhases = (
+				D1B621F52D5ED8C600C8ACDF /* Resources */,
+				D1B622332D5ED8C700C8ACDF /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D1B622052D5ED8C700C8ACDF /* PBXTargetDependency */,
+			);
+			name = "pineapple WatchKit App";
+			productName = "pineapple WatchKit App";
+			productReference = D1B621F72D5ED8C600C8ACDF /* pineapple WatchKit App.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		D1B622012D5ED8C700C8ACDF /* pineapple WatchKit Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D1B622302D5ED8C700C8ACDF /* Build configuration list for PBXNativeTarget "pineapple WatchKit Extension" */;
+			buildPhases = (
+				D1B621FE2D5ED8C700C8ACDF /* Sources */,
+				D1B621FF2D5ED8C700C8ACDF /* Frameworks */,
+				D1B622002D5ED8C700C8ACDF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "pineapple WatchKit Extension";
+			productName = "pineapple WatchKit Extension";
+			productReference = D1B622022D5ED8C700C8ACDF /* pineapple WatchKit Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
+		D1B6221B2D5ED8C700C8ACDF /* pineappleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D1B6223B2D5ED8C700C8ACDF /* Build configuration list for PBXNativeTarget "pineappleTests" */;
+			buildPhases = (
+				D1B622182D5ED8C700C8ACDF /* Sources */,
+				D1B622192D5ED8C700C8ACDF /* Frameworks */,
+				D1B6221A2D5ED8C700C8ACDF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D1B6221E2D5ED8C700C8ACDF /* PBXTargetDependency */,
+			);
+			name = pineappleTests;
+			productName = pineappleTests;
+			productReference = D1B6221C2D5ED8C700C8ACDF /* pineappleTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		D1B622252D5ED8C700C8ACDF /* pineappleUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D1B6223E2D5ED8C700C8ACDF /* Build configuration list for PBXNativeTarget "pineappleUITests" */;
+			buildPhases = (
+				D1B622222D5ED8C700C8ACDF /* Sources */,
+				D1B622232D5ED8C700C8ACDF /* Frameworks */,
+				D1B622242D5ED8C700C8ACDF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D1B622282D5ED8C700C8ACDF /* PBXTargetDependency */,
+			);
+			name = pineappleUITests;
+			productName = pineappleUITests;
+			productReference = D1B622262D5ED8C700C8ACDF /* pineappleUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D1B621ED2D5ED8C500C8ACDF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1320;
+				LastUpgradeCheck = 1320;
+				TargetAttributes = {
+					D1B621F22D5ED8C500C8ACDF = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+					D1B621F62D5ED8C600C8ACDF = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+					D1B622012D5ED8C700C8ACDF = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+					D1B6221B2D5ED8C700C8ACDF = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = D1B622012D5ED8C700C8ACDF;
+					};
+					D1B622252D5ED8C700C8ACDF = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = D1B621F62D5ED8C600C8ACDF;
+					};
+				};
+			};
+			buildConfigurationList = D1B621F02D5ED8C500C8ACDF /* Build configuration list for PBXProject "pineapple" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D1B621EC2D5ED8C500C8ACDF;
+			productRefGroup = D1B621F42D5ED8C600C8ACDF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D1B621F22D5ED8C500C8ACDF /* pineapple */,
+				D1B621F62D5ED8C600C8ACDF /* pineapple WatchKit App */,
+				D1B622012D5ED8C700C8ACDF /* pineapple WatchKit Extension */,
+				D1B6221B2D5ED8C700C8ACDF /* pineappleTests */,
+				D1B622252D5ED8C700C8ACDF /* pineappleUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D1B621F12D5ED8C500C8ACDF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D1B621F52D5ED8C600C8ACDF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D1B621FD2D5ED8C700C8ACDF /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D1B622002D5ED8C700C8ACDF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D1B622152D5ED8C700C8ACDF /* Preview Assets.xcassets in Resources */,
+				D1B622122D5ED8C700C8ACDF /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D1B6221A2D5ED8C700C8ACDF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D1B622242D5ED8C700C8ACDF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D1B621FE2D5ED8C700C8ACDF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D1B6220C2D5ED8C700C8ACDF /* NotificationController.swift in Sources */,
+				D1B6220A2D5ED8C700C8ACDF /* ContentView.swift in Sources */,
+				D1B622102D5ED8C700C8ACDF /* ComplicationController.swift in Sources */,
+				D1B622482D5EE96400C8ACDF /* DetailView.swift in Sources */,
+				D1B622082D5ED8C700C8ACDF /* pineappleApp.swift in Sources */,
+				D1B6220E2D5ED8C700C8ACDF /* NotificationView.swift in Sources */,
+				D1B622442D5EDC7900C8ACDF /* Task.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D1B622182D5ED8C700C8ACDF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D1B622212D5ED8C700C8ACDF /* pineappleTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D1B622222D5ED8C700C8ACDF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D1B6222B2D5ED8C700C8ACDF /* pineappleUITests.swift in Sources */,
+				D1B6222D2D5ED8C700C8ACDF /* pineappleUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D1B621FA2D5ED8C600C8ACDF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D1B621F62D5ED8C600C8ACDF /* pineapple WatchKit App */;
+			targetProxy = D1B621F92D5ED8C600C8ACDF /* PBXContainerItemProxy */;
+		};
+		D1B622052D5ED8C700C8ACDF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D1B622012D5ED8C700C8ACDF /* pineapple WatchKit Extension */;
+			targetProxy = D1B622042D5ED8C700C8ACDF /* PBXContainerItemProxy */;
+		};
+		D1B6221E2D5ED8C700C8ACDF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D1B622012D5ED8C700C8ACDF /* pineapple WatchKit Extension */;
+			targetProxy = D1B6221D2D5ED8C700C8ACDF /* PBXContainerItemProxy */;
+		};
+		D1B622282D5ED8C700C8ACDF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D1B621F62D5ED8C600C8ACDF /* pineapple WatchKit App */;
+			targetProxy = D1B622272D5ED8C700C8ACDF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		D1B6222E2D5ED8C700C8ACDF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		D1B6222F2D5ED8C700C8ACDF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D1B622312D5ED8C700C8ACDF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"pineapple WatchKit Extension/Preview Content\"";
+				DEVELOPMENT_TEAM = B5TPU3737P;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "pineapple WatchKit Extension/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "pineapple WatchKit Extension";
+				INFOPLIST_KEY_CLKComplicationPrincipalClass = "$(PRODUCT_MODULE_NAME).ComplicationController";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_WKWatchOnly = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = treehacks.pineapple.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 8.3;
+			};
+			name = Debug;
+		};
+		D1B622322D5ED8C700C8ACDF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"pineapple WatchKit Extension/Preview Content\"";
+				DEVELOPMENT_TEAM = B5TPU3737P;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "pineapple WatchKit Extension/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "pineapple WatchKit Extension";
+				INFOPLIST_KEY_CLKComplicationPrincipalClass = "$(PRODUCT_MODULE_NAME).ComplicationController";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_WKWatchOnly = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = treehacks.pineapple.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 8.3;
+			};
+			name = Release;
+		};
+		D1B622352D5ED8C700C8ACDF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = B5TPU3737P;
+				GENERATE_INFOPLIST_FILE = YES;
+				IBSC_MODULE = pineapple_WatchKit_Extension;
+				INFOPLIST_KEY_CFBundleDisplayName = "pineapple WatchKit App";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = treehacks.pineapple.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 8.3;
+			};
+			name = Debug;
+		};
+		D1B622362D5ED8C700C8ACDF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = B5TPU3737P;
+				GENERATE_INFOPLIST_FILE = YES;
+				IBSC_MODULE = pineapple_WatchKit_Extension;
+				INFOPLIST_KEY_CFBundleDisplayName = "pineapple WatchKit App";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = treehacks.pineapple.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 8.3;
+			};
+			name = Release;
+		};
+		D1B622392D5ED8C700C8ACDF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = B5TPU3737P;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = treehacks.pineapple;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		D1B6223A2D5ED8C700C8ACDF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = B5TPU3737P;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = treehacks.pineapple;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		D1B6223C2D5ED8C700C8ACDF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = treehacks.pineappleTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/pineapple WatchKit Extension.appex/pineapple WatchKit Extension";
+				WATCHOS_DEPLOYMENT_TARGET = 8.3;
+			};
+			name = Debug;
+		};
+		D1B6223D2D5ED8C700C8ACDF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = treehacks.pineappleTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/pineapple WatchKit Extension.appex/pineapple WatchKit Extension";
+				WATCHOS_DEPLOYMENT_TARGET = 8.3;
+			};
+			name = Release;
+		};
+		D1B6223F2D5ED8C700C8ACDF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = treehacks.pineappleUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_TARGET_NAME = "pineapple WatchKit App";
+				WATCHOS_DEPLOYMENT_TARGET = 8.3;
+			};
+			name = Debug;
+		};
+		D1B622402D5ED8C700C8ACDF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = treehacks.pineappleUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_TARGET_NAME = "pineapple WatchKit App";
+				WATCHOS_DEPLOYMENT_TARGET = 8.3;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D1B621F02D5ED8C500C8ACDF /* Build configuration list for PBXProject "pineapple" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D1B6222E2D5ED8C700C8ACDF /* Debug */,
+				D1B6222F2D5ED8C700C8ACDF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D1B622302D5ED8C700C8ACDF /* Build configuration list for PBXNativeTarget "pineapple WatchKit Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D1B622312D5ED8C700C8ACDF /* Debug */,
+				D1B622322D5ED8C700C8ACDF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D1B622342D5ED8C700C8ACDF /* Build configuration list for PBXNativeTarget "pineapple WatchKit App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D1B622352D5ED8C700C8ACDF /* Debug */,
+				D1B622362D5ED8C700C8ACDF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D1B622382D5ED8C700C8ACDF /* Build configuration list for PBXNativeTarget "pineapple" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D1B622392D5ED8C700C8ACDF /* Debug */,
+				D1B6223A2D5ED8C700C8ACDF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D1B6223B2D5ED8C700C8ACDF /* Build configuration list for PBXNativeTarget "pineappleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D1B6223C2D5ED8C700C8ACDF /* Debug */,
+				D1B6223D2D5ED8C700C8ACDF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D1B6223E2D5ED8C700C8ACDF /* Build configuration list for PBXNativeTarget "pineappleUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D1B6223F2D5ED8C700C8ACDF /* Debug */,
+				D1B622402D5ED8C700C8ACDF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D1B621ED2D5ED8C500C8ACDF /* Project object */;
+}
