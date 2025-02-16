@@ -1,4 +1,4 @@
-from src.llm_compiler.constants import END_OF_PLAN, SUMMARY_RESULT
+from tinyagent.src.llm_compiler.constants import END_OF_PLAN, SUMMARY_RESULT
 from src.llm_compiler.llm_compiler import LLMCompiler
 from src.llm_compiler.planner import generate_llm_compiler_prompt
 from src.tiny_agent.computer import Computer
