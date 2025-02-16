@@ -2,6 +2,7 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'next/navigation';
 import { AlertCircle, CheckCircle, Clock } from 'lucide-react';
+import ReactMarkdown from 'react-markdown';
 
 interface TaskMetadata {
   agent_version: string;
@@ -57,7 +58,9 @@ const AgentLogSection = ({ log }: { log: AgentLog }) => {
               <div className="bg-blue-100 text-blue-800 rounded-full w-6 h-6 flex items-center justify-center flex-shrink-0">
                 {idx + 1}
               </div>
-              <div className="font-mono text-sm">{step}</div>
+              <div className="font-mono text-sm">
+                {step}
+              </div>
             </div>
           ))}
         </div>
@@ -69,7 +72,9 @@ const AgentLogSection = ({ log }: { log: AgentLog }) => {
           {log.task_log.split('\n').map((entry, idx) => (
             <div key={idx} className="flex items-center gap-2 bg-gray-50 p-2 rounded">
               <Clock className="w-4 h-4 text-gray-500" />
-              <span className="font-mono text-sm">{entry}</span>
+              <span className="font-mono text-sm">
+                {entry}
+              </span>
             </div>
           ))}
         </div>
@@ -187,14 +192,18 @@ export default function TaskPage() {
         {task.result && (
           <div>
             <h2 className="text-lg font-semibold mb-2">Result</h2>
-            <p>{task.result}</p>
+            <div className="bg-gray-50 p-3 rounded prose prose-sm max-w-none">
+              <ReactMarkdown>{task.result}</ReactMarkdown>
+            </div>
           </div>
         )}
 
         {task.error_message && (
           <div>
             <h2 className="text-lg font-semibold text-red-600 mb-2">Error</h2>
-            <p className="text-red-600">{task.error_message}</p>
+            <div className="text-red-600">
+              {task.error_message}
+            </div>
           </div>
         )}
 
@@ -204,11 +213,13 @@ export default function TaskPage() {
             <div className="space-y-2">
               {task.thoughts.map((thought, index) => (
                 <div key={index} className="p-3 bg-gray-50 rounded">
-                  <div className="flex items-center gap-2">
-                    <div className="bg-blue-100 text-blue-800 rounded-full w-6 h-6 flex items-center justify-center">
+                  <div className="flex items-start gap-2">
+                    <div className="bg-blue-100 text-blue-800 rounded-full w-6 h-6 flex items-center justify-center flex-shrink-0">
                       {thought.step}
                     </div>
-                    <span>{thought.thought}</span>
+                    <div>
+                      {thought.thought}
+                    </div>
                   </div>
                   <div className="text-sm text-gray-500 mt-1">
                     {new Date(thought.timestamp).toLocaleString()}

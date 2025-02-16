@@ -14,13 +14,8 @@ interface Task {
 export default function Home() {
   const [tasks, setTasks] = useState<Task[]>([]);
   const [newTask, setNewTask] = useState("");
+  const [mounted, setMounted] = useState(false);
   const router = useRouter();
-
-  useEffect(() => {
-    fetchTasks();
-    const interval = setInterval(fetchTasks, 2000);
-    return () => clearInterval(interval);
-  }, []);
 
   const fetchTasks = async () => {
     try {
@@ -41,6 +36,17 @@ export default function Home() {
     }
   };
 
+  useEffect(() => {
+    setMounted(true);
+    fetchTasks();
+    const interval = setInterval(fetchTasks, 2000);
+    return () => clearInterval(interval);
+  }, []);
+
+  if (!mounted) {
+    return null;
+  }
+
   const handleAddTask = async () => {
     if (!newTask.trim()) return;
 
@@ -58,7 +64,7 @@ export default function Home() {
         task_id: newTaskData.task_id, 
         task_description: newTask, 
         status: "Pending", 
-        date: new Date().toLocaleDateString()
+        date: "2024-02-14 12:00:00",  // Fixed date for testing
       }]);
       setNewTask("");
     } catch (error) {
