@@ -1,79 +1,76 @@
 import asyncio
-import uuid
-from queue import Queue
+from asyncio import TimeoutError
+import os
+
 from tinyagent.src.tiny_agent.tiny_agent import TinyAgent
 from tinyagent.src.tiny_agent.config import get_tiny_agent_config
 
-CONFIG_PATH = "Configuration.json"
+# Get the user's home directory and construct the path
+HOME_DIR = os.path.expanduser("~")
+AGENT_LOG_FILE_PATH = os.path.join(HOME_DIR, "Library", "Application Support", "TinyAgent", "log.txt")
+
+CONFIG_PATH = "config.json"
 tiny_agent_config = get_tiny_agent_config(config_path=CONFIG_PATH)
-tiny_agent = TinyAgent(tiny_agent_config)
 
-task_queue = Queue()
-task_store = {}  # Store task details by ID
 
+def parse_agent_log():
+    """
+    Parse the first three sections of the agent scratchpad.
+    Returns a tuple of (task_log, planner_response, agent_scratchpad)
+    """
+    
+    with open(AGENT_LOG_FILE_PATH, "r") as f:
+        content = f.read()
+    
+    task_log_end = content.find("=" * 80)
+    task_log = content[:task_log_end].strip()
+
+    planner_start = content.find("LLMCompiler planner response:", task_log_end)
+    next_delimiter = content.find("=" * 80, planner_start)
+    planner_response = content[planner_start:next_delimiter].strip()
+    planner_response = planner_response.replace("LLMCompiler planner response:", "").strip()
+
+    scratchpad_start = content.find("Agent scratchpad:", next_delimiter)
+    next_delimiter = content.find("=" * 80, scratchpad_start)
+    agent_scratchpad = content[scratchpad_start:next_delimiter].strip()
+    agent_scratchpad = agent_scratchpad.replace("Agent scratchpad:", "").strip()
+
+    return {
+        "task_log": task_log,
+        "planner_response": planner_response,
+        "agent_scratchpad": agent_scratchpad
+    }
+    
+    
 async def query_tiny_agent(query: str):
     """
     Runs TinyAgent with the given query and returns the response.
+    Exits if the query takes longer than 30 seconds.
     """
-    response = await tiny_agent.arun(query=query)
-    return response
-
-### **1️⃣ Add a new task**
-def add_task(task_description):
-    """
-    Add a new task to the queue and return the task ID.
-    """
-    task_id = str(uuid.uuid4())
-    task_store[task_id] = {"task_id": task_id, "task_description": task_description, "status": "pending"}
-    task_queue.put(task_id)
-    return task_id
-
-### **2️⃣ Get all tasks**
-def get_all_tasks():
-    """
-    Retrieve all tasks stored.
-    """
-    return list(task_store.values())
-
-### **3️⃣ Get a specific task by ID**
-def get_task_by_id(task_id):
-    """
-    Retrieve a specific task by its ID.
-    """
-    return task_store.get(task_id)
-
-### **4️⃣ Execute a specific task**
-async def execute_task_by_id(task_id):
-    """
-    Execute a specific task using TinyAgent.
-    """
-    task = task_store.get(task_id)
-    if not task or task["status"] in ["completed", "failed"]:
-        return None
-
-    task["status"] = "processing"
+    
+    # Clear log file before initializing agent
+    open(AGENT_LOG_FILE_PATH, 'w').close()
+    tiny_agent = TinyAgent(tiny_agent_config)
 
     try:
-        response = await tiny_agent.arun(query=task["task_description"])
-        task["status"] = "completed"
-        task["response"] = response
-    except Exception as e:
-        task["status"] = "failed"
-        task["error"] = str(e)
-
-    return task["status"]
-
-### **5️⃣ Execute all pending tasks**
-async def execute_all_tasks():
-    """
-    Execute all pending tasks in order.
-    """
-    statuses = {}
-
-    while not task_queue.empty():
-        task_id = task_queue.get()
-        status = await execute_task_by_id(task_id)
-        statuses[task_id] = status
-        task_queue.task_done()
-
-    return statuses
+        task = asyncio.create_task(tiny_agent.arun(query=query))
+                
+        response = await asyncio.wait_for(task, timeout=30.0)        
+        parsed_log = parse_agent_log()
+        
+        if 'SONAR' in parsed_log["agent_scratchpad"]:
+            response = parsed_log["agent_scratchpad"].split("Completion: ")[-1]
+        else:
+            response = "Sucessfully executed function calls!"
+        
+        return response, parsed_log
+        
+    except TimeoutError:
+        task.cancel()
+        
+        try:
+            await task 
+        except asyncio.CancelledError:
+            pass
+        print("Query timed out after 30 seconds:", query)
+        return None
