@@ -8,7 +8,7 @@ async def main():
     tiny_agent_config = get_tiny_agent_config(config_path=config_path)
     tiny_agent = TinyAgent(tiny_agent_config)
     
-    await tiny_agent.arun(query="Create a meeting with Derek Xu for tomorrow 2pm to discuss the meeting notes.")
+    await tiny_agent.arun(query="Write an email tomorrow with Richard Chao for tomorrow 2pm to discuss the meeting notes.")
 
 # Run the async function
 if __name__ == "__main__":

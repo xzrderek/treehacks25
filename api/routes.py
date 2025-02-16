@@ -9,7 +9,7 @@ def test():
     """
     Test route to trigger TinyAgent asynchronously.
     """
-    query_text = "Create a meeting with Sid and Lutfi for tomorrow 2pm to discuss the meeting notes."
+    query_text = "Create a meeting with Richard Chao for tomorrow 2pm to discuss the meeting notes."
     
     response = asyncio.run(query_tiny_agent(query_text))
     return jsonify({"response": response})
